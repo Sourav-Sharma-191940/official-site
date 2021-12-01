@@ -16,7 +16,7 @@
         v-if="getCurrentRoute == '/'"
       >
         <v-icon class="bcl-menu-item-icon" color="green darken-2" x-large
-          >mdi-party-popper</v-icon
+          >mdi-calendar-star</v-icon
         >
         <div class="bcl-menu-item-title bcl-large-text">Events</div>
       </div>
@@ -42,16 +42,6 @@
       </div>
       <div
         class="bcl-menu-item"
-        @click="scrollToContactUs"
-        v-if="getCurrentRoute == '/'"
-      >
-        <v-icon class="bcl-menu-item-icon" color="green darken-2" x-large
-          >mdi-human-greeting-proximity</v-icon
-        >
-        <div class="bcl-menu-item-title bcl-medium-text">Contact Us</div>
-      </div>
-      <div
-        class="bcl-menu-item"
         @click="routerView('/')"
         v-if="getCurrentRoute != '/'"
       >
@@ -59,6 +49,15 @@
           >mdi-home-assistant</v-icon
         >
         <div class="bcl-menu-item-title bcl-medium-text">Home</div>
+      </div>
+      <div
+        class="bcl-menu-item"
+        @click="routerView('/batches')"
+      >
+        <v-icon class="bcl-menu-item-icon" color="green darken-2" x-large
+          >mdi-database-search</v-icon
+        >
+        <div class="bcl-menu-item-title bcl-large-text">Batches</div>
       </div>
       <div
         class="bcl-menu-item"
@@ -80,6 +79,24 @@
           >mdi-wall</v-icon
         >
         <div class="bcl-menu-item-title bcl-medium-text">Initiator</div>
+      </div>
+      <div
+        class="bcl-menu-item"
+        @click="routerView('/events_winner')"
+      >
+        <v-icon class="bcl-menu-item-icon" color="green darken-2" x-large
+          >mdi-party-popper</v-icon
+        >
+        <div class="bcl-menu-item-title bcl-medium-text">Events Winner</div>
+      </div>
+      <div
+        class="bcl-menu-item"
+        @click="scrollToContactUs"
+      >
+        <v-icon class="bcl-menu-item-icon" color="green darken-2" x-large
+          >mdi-human-greeting-proximity</v-icon
+        >
+        <div class="bcl-menu-item-title bcl-medium-text">Contact Us</div>
       </div>
     </v-container>
   </v-navigation-drawer>
